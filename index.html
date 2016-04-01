@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<link rel="stylesheet" href="./jquery.treeComboBox.css">
+		<script src="./jquery.min.js"></script>
+		<script src="./jquery.treeComboBox.0.1.js"></script>
+		<style type="text/css">
+			.ac_results div {
+				display: inline-block;
+				width: 50%;
+			}
+			.ac_results li label.ac_collapsed {
+				background-image: url('data:image/gif;base64,R0lGODlhFAAUALMAADMzM39/f8zMzExMTLKyspmZmWZmZuXl5f///wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEHAAgALAAAAAAUABQAAAQuEMlJq7046827/9UAjCQwbERJEpyhGp2gCl5ABt9BHmABFCDEYcALGo/IpHITAQA7');
+				background-repeat: no-repeat;
+				padding-left: 22px;
+			}
+			.ac_results li label.ac_collapsible {
+				background-image: url('data:image/gif;base64,R0lGODlhFAAUALMAAJmZmaWlpdnZ2bm5ufLy8szMzLKysuXl5b+/v////wAAAAAAAAAAAAAAAAAAAAAAACH5BAEHAAkALAAAAAAUABQAAAQrMMlJq7046827T4HwTQBgHGNZIoSnqkW7vWrA0UB8q4O8n6PQaEgsGo/HCAA7');
+				background-repeat: no-repeat;
+				padding-left: 22px;
+			}
+			.ac_results li label {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div><input id="input-box" type="text"></div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			var option = {src: './data.json', bind_to: 'getData', pageSize: 5};
+			var getData = function(){
+				console.log("trigger get data");
+			}
+			$("#input-box").treeComboBox(option).bind("getData", getData);		
+		})
+	</script>
+</html>
