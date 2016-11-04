@@ -31,9 +31,9 @@
 	<script>
 		$(document).ready(function() {
 			var option = {src: './data.json', bind_to: 'getData', pageSize: 5};
-			var getData = function(){
-				console.log("trigger get data");
-			}
+			var getData = function(el,data){
+				console.log(data);
+			};
 			$("#input-box").treeComboBox(option).bind("getData", getData);		
 		})
 	</script>
